@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SurveyWithFragments</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+    <string name="question_textview">Do you like bacon?</string>
+    <string name="results_button">Results</string>
+    <string name="reset_button">Reset Results</string>
+    <string name="continue_survey_button">Continue Survey</string>
+    <string name="change_question">Change Question</string>
+    <string name="submit_button">Submit</string>
+    <string name="edit_text_question">Enter new question here</string>
+    <string name="edit_text_yes_button">New Answer</string>
+    <string name="edit_text_no_button">New Answer</string>
+</resources>
