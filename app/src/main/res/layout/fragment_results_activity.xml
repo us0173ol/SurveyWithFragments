@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_results"
@@ -9,6 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#453EFF"
     tools:context="com.bignerdranch.android.surveywithfragments.MainActivity">
 
     <TextView
@@ -16,28 +17,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Results go here"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="101dp"
+        android:layout_gravity="top|center"
         android:textSize="36sp"
         android:textStyle="normal|bold"
         android:fontFamily="casual"/>
-
-    <Button
-        android:id="@+id/continue_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/continue_survey_button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
 
     <Button
         android:id="@+id/reset_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reset_button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-</RelativeLayout>
+        android:layout_gravity="bottom|left"/>
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continue_survey_button"
+        android:layout_gravity="bottom|right"/>
+</FrameLayout>

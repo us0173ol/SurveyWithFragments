@@ -8,6 +8,7 @@
     android:gravity="center"
     tools:context="com.bignerdranch.android.surveywithfragments.MainActivity"
     android:orientation="vertical"
+    android:background="#b6b4ea"
     android:text="">
 
     <TextView
@@ -21,29 +22,28 @@
         android:textStyle="normal|bold"/>
 
 
-        <Button
-            android:id="@+id/yes_button"
-            android:layout_width="181dp"
-            android:layout_height="101dp"
-            android:text="@string/yes_button"
-            android:layout_gravity="bottom|left"
-            android:textSize="30sp"
-            android:textColor="@android:color/holo_green_dark"/>
+    <Button
+        android:id="@+id/yes_button"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:text="@string/yes_button"
+        android:layout_gravity="bottom|left"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_green_dark"/>
 
-        <Button
-            android:id="@+id/no_button"
-            android:layout_width="181dp"
-            android:layout_height="101dp"
-            android:text="@string/no_button"
-            android:layout_gravity="bottom|right"
-            android:textSize="30sp"
-            android:textColor="@android:color/holo_red_dark"/>
-
+    <Button
+        android:id="@+id/no_button"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:text="@string/no_button"
+        android:layout_gravity="bottom|right"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_red_dark"/>
 
     <Button
         android:id="@+id/results_button"
-        android:layout_width="181dp"
-        android:layout_height="101dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/results_button"
         android:layout_gravity="top|right"
         android:fontFamily="serif"
@@ -52,10 +52,10 @@
 
     <Button
         android:id="@+id/change_question"
-        android:layout_width="181dp"
-        android:layout_height="101dp"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
         android:text="@string/change_question"
-        android:textSize="24sp"
+        android:textSize="10sp"
         android:fontFamily="serif"
         android:textStyle="normal|bold"/>
 </FrameLayout>

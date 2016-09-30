@@ -25,10 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        SurveyActivity addSurveyActivity = SurveyActivity.newInstance();
+
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
-        ft.add(R.id.surevey_view_container, surveyFragment, SURVEY_KEY);
+        ft.add(R.id.surevey_view_container, addSurveyActivity, SURVEY_KEY);
         ft.add(R.id.results_view_container, resultsFragment, RESULTS_KEY);
         ft.add(R.id.change_question_view_container, questionFragment, QUESTION_KEY);
         ft.commit();
