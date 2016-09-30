@@ -20,6 +20,14 @@ public class ResultsActivity extends Fragment {
     private Button mContinueSurveyButton;
 
 
+    //TODO add an interface called ResetSurveyListener with one method called resetSurvey()
+
+    //TODO add a variable to store a reference to a ResetSurveyListener
+
+    //TODO add onAttach(Activity activity) method to save the activity as the ResetSurveyListener
+
+    //Change TextView to global variable
+    TextView showResults;
 
 
     @Override
@@ -27,9 +35,23 @@ public class ResultsActivity extends Fragment {
         View view = inflater.inflate(R.layout.fragment_results_activity, container, false);
 
         //returnYes = getArguments()
-        TextView showResults = (TextView) view.findViewById(R.id.results_textview);
-        showResults.setText("Yes:" + returnYes + "No: " + returnNo);
+        showResults = (TextView) view.findViewById(R.id.results_textview);
+       // showResults.setText("Yes:" + returnYes + "No: " + returnNo);
+        //You are showing a default value until data received
+
+        //TODO - listener for the reset button, will send a message to the ResetSurveyListener
+        //TODO Have MainActivity implemente ResetSurveyListener, and provide a resetSurvey() method
+        //When this method is called, MainActivity will notify SurveyActivity.
+        //Provide a reset method in SurveyActivty that sets yesCounter and noCounter to 0.
 
         return view;
+    }
+
+
+    ///SurveyFragment notifies MainActivity when the results are updated,
+    //and MainActivity calls this method.
+    public void resultsUpdated(int yes, int no) {
+        showResults.setText("Yes:" + yes + "No: " + no);
+
     }
 }
