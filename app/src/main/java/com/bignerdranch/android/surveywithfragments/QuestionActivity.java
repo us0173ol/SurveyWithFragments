@@ -10,6 +10,8 @@ import android.view.ViewGroup;
  * Created by miked on 9/27/2016.
  */
 
+//Suggest renaming this to 'QuestionFragment' or similar?
+
 public class QuestionActivity extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle SavedInstanceState){
