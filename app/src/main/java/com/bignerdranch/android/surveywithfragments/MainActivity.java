@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity implements
     //Have MainActivity be something that can listen for updates from SurveyFragment
-
+//implement listeners for each fragment
         SurveyFragment.SurveyResultsUpdatedListener,
         ResultsFragment.ResetSurveyListener,
         QuestionFragment.ChangeQuestionListener{
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //fragment manager for displaying the fragments
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
@@ -47,13 +47,13 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void resetSurvey(int yes, int no) {
-
+        //send message to surveyFragment
         surveyFragment.resultsReset(yes, no);
     }
 
     @Override
     public void changeQuestion(String question, String answer1, String answer2){
-
+        //send messages to survey activity for new question and answers
         surveyFragment.changeQuestion(question, answer1, answer2);
     }
 }

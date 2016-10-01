@@ -16,15 +16,15 @@ import android.widget.EditText;
 //Suggest renaming this to 'QuestionFragment' or similar?
 
 public class QuestionFragment extends Fragment {
-
+    //refernece to my submit button
     private Button mSubmitButton;
-
-    int yesCounter = 0;
-    int noCounter = 0;
-
+//hopefully for tidying in the future to reset results when a new question is displayed
+//    int yesCounter = 0;
+//    int noCounter = 0;
+    //interface and method for changeQuestion listener
     public interface ChangeQuestionListener{
         public void changeQuestion(String question, String answer1, String answer2);
-    }
+    }//refernece to changeQuestionListener
     private ChangeQuestionListener mChangeQuestionListener;
 
     public static QuestionFragment newInstance(){
@@ -44,15 +44,16 @@ public class QuestionFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle SavedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_new_question_activity, container, false);
-
+        //variables for data being sent to survey activity for new qusetion and answers
         final EditText userInput = (EditText)view.findViewById(R.id.edit_text_box);
         final EditText answer1 = (EditText)view.findViewById(R.id.editText2);
         final EditText answer2 = (EditText)view.findViewById(R.id.editText3);
-
+        //listener for submit button
         mSubmitButton = (Button) view.findViewById(R.id.submit_button);
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Change the question and answers and clear edit text fields when submit is clicked
                 mChangeQuestionListener.changeQuestion(
                         userInput.getText().toString(),
                         answer1.getText().toString(),

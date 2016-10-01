@@ -90,12 +90,12 @@ public class SurveyFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_survey_activity, container, false);
-
+        //Set default values for yes and no buttons
         yesButtonText = getString(R.string.yes_button);
         noButtonText = getString(R.string.no_button);
 
         showQuestion = (TextView) view.findViewById(R.id.question_textview);
-
+        //Listener for clicked yes button, update results after adding to counter
         mYesButton = (Button) view.findViewById(R.id.yes_button);
         mYesButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -105,7 +105,7 @@ public class SurveyFragment extends Fragment {
                 mResultsUpdatedListener.resultsUpdated(yesCounter,noCounter);
 
             }
-        });
+        });//listener for no button, does the same as yes button
         mNoButton = (Button) view.findViewById(R.id.no_button);
         mNoButton.setOnClickListener(new View.OnClickListener(){
             @Override
