@@ -21,12 +21,13 @@
         android:text="Submit"/>
 
     <TextView
-        android:text="enter your answers"
+        android:text="Enter New Answers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:layout_gravity="center|bottom"
-        android:layout_marginBottom="55dp"/>
+        android:layout_marginBottom="55dp"
+        android:textSize="24sp"/>
 
     <EditText
         android:id="@+id/editText2"
@@ -50,7 +51,7 @@
         android:textAlignment="center"/>
 
     <TextView
-        android:text="Change the question?"
+        android:text="Enter New Survey Question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|center"

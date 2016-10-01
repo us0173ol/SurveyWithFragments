@@ -15,7 +15,7 @@
         android:id="@+id/question_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center|top"
         android:text="@string/question_textview"
         android:fontFamily="casual"
         android:textSize="30sp"
@@ -40,22 +40,4 @@
         android:textSize="30sp"
         android:textColor="@android:color/holo_red_dark"/>
 
-    <Button
-        android:id="@+id/results_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/results_button"
-        android:layout_gravity="top|right"
-        android:fontFamily="serif"
-        android:textSize="24sp"
-        android:textStyle="normal|bold"/>
-
-    <Button
-        android:id="@+id/change_question"
-        android:layout_width="134dp"
-        android:layout_height="wrap_content"
-        android:text="@string/change_question"
-        android:textSize="10sp"
-        android:fontFamily="serif"
-        android:textStyle="normal|bold"/>
 </FrameLayout>
