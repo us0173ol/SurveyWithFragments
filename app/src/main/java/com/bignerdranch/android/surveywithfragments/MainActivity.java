@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements
         //fragment manager for displaying the fragments
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-
+        //this displays each fragment in their own container
         ft.add(R.id.surevey_view_container, surveyFragment, SURVEY_KEY);
         ft.add(R.id.results_view_container, resultsFragment, RESULTS_KEY);
         ft.add(R.id.change_question_view_container, questionFragment, QUESTION_KEY);
